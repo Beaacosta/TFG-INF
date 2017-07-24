@@ -23,15 +23,9 @@
 	  		</div>
 	  		<button type="button" class="btnPpal btn btn-lg btn-block">Iniciar Sesión</button>
 	  		<br>
-<<<<<<< HEAD
-	  	</form>
-	  		<a href="" data-toggle="modal" data-target="#ventanaRegistro"><p class="text-center">Si aún no estás registrado pulse aquí.</p></a>	
- 			<?php include(ABSPATH . 'templates/registroUsuario.php');?>	
-=======
 		</form>
 		<a href="" data-toggle="modal" data-target="#ventanaRegistro"><p class="text-center">Si aún no estás registrado pulse aquí.</p></a>	
 		<?php include(ABSPATH . 'templates/registroUsuario.php');?>
->>>>>>> 032d99ed4be8baebbe7211b73cfe7fec15b7ad12
 	</div>
 </div>
 <div id="caracteristicas" class="container-fluid">
@@ -79,13 +73,8 @@
 			<a href="" data-toggle="modal" data-target="#ventanaRegistro">
 				<img src="images/registro.png" style="width:100px;"> 
 				<p style="color:#227A4B">Quiero registrarme</p>
-<<<<<<< HEAD
-			</a>	
- 			<?php include(ABSPATH . 'templates/registroUsuario.php');?>
-=======
 			</a>
 		<?php include(ABSPATH . 'templates/registroUsuario.php');?>
->>>>>>> 032d99ed4be8baebbe7211b73cfe7fec15b7ad12
 		</div>
 	</div>
 </div>
