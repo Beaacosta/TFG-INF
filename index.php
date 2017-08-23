@@ -1,27 +1,27 @@
 <?php require_once('config.php');?>
-<?php require_once('functions/library.php');?>
-<?php  require_once('functions/front-controller.php');?>
+<?php require_once(ABSPATH . 'functions/library.php');?>
+<?php  require_once(ABSPATH . 'functions/front-controller.php');?>
 
 <?php include(ABSPATH . 'templates/header.php');?>
 
 <div id="portadaPpal" class="container-fluid">
 	<div class="row" id="portada">
 		<div class=col-xs-12>
-			<h1 id="titulo">Rivera de Villoria</h1>
+			<h1 id="titulo">Cattle manager</h1>
 		</div>
 	</div>
 
 	<div class="row" id="inicioSesion">
-		<form>
+		<form method="POST" action="<?=$_SERVER['PHP_SELF']?>?accion=iniciar_sesion">
 	 		<div class="form-group">
 	   			<label for="email">Email</label>
-	    		<input type="text" class="form-control" id="email" placeholder="example@gmail.com">
+	    		<input type="text" name="email" class="form-control" id="email" placeholder="example@gmail.com">
 	  		</div>
 	  		<div class="form-group">
 	    		<label for="password">Contraseña</label>
-	    		<input type="password" class="form-control" id="password" placeholder="Contraseña">
+	    		<input type="password" name="password" class="form-control" id="password" placeholder="Contraseña">
 	  		</div>
-	  		<button type="button" class="btnPpal btn btn-lg btn-block">Iniciar Sesión</button>
+	  		<button type="submit" class="btnPpal btn btn-lg btn-block">Iniciar Sesión</button>
 	  		<br>
 		</form>
 		<a href="" data-toggle="modal" data-target="#ventanaRegistro"><p class="text-center">Si aún no estás registrado pulse aquí.</p></a>	
