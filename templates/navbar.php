@@ -1,8 +1,8 @@
 <div class="nav">
 	<ul>
-		<li><a href="#">Inicio</a></li>
-		<li><a class="active" href="#">Productos</a></li>		
-		<li><a href="#">Ubicacion</a></li>
-		<li><a href="#">Contactar</a></li>
+		<li><a href="#">EXPLOTACIONES</a></li>
+		<li><a class="active" href="#">ANIMALES</a></li>		
+		<li><a href="#">MOVIMIENTOS</a></li>
+		<li><a href="#">REPRODUCCIÓN</a></li>
 	</ul>
 </div>
