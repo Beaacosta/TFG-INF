@@ -11,6 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font: inherit;
 	vertical-align: baseline;
 }
+
 	body, input, select, textarea {
 		color: #151515;
 		font-family: "Open Sans", sans-serif;
@@ -150,21 +151,7 @@ hr {
 				width: 100%;
 			}
 
-/* Footer */
-
-footer{
-	background-color: #FFFFFF;
-}
-
-footer .copyright {
-	color: #9fa3a6;
-	font-size: 0.9em;
-	text-align: center;
-}
-
-footer .copyright a {
-	color: inherit;
-}
+/* Otros */
 
 .btnPpal{
 	background-color: #227A4B;
@@ -224,5 +211,58 @@ footer .copyright a {
 	border-radius: 10px;
 	padding: 10px;
 }
+
+/* Footer */
+
+footer{
+	background-color: #FFFFFF;
+}
+
+footer .copyright {
+	color: #9fa3a6;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+footer .copyright a {
+	color: inherit;
+}
+
+/* Header */
+
+.cabecera{
+	background: #585858;
+	color: #F2F2F2;
+	font-family: "Open Sans", sans-serif;
+	font-size: 12pt;
+	font-weight: 400;
+	line-height: 1.65;
+	padding-top: 0.7%;
+	padding-bottom: 0.7%;
+	padding-left: 2%;
+	padding-right: 2%;
+	margin-right: 0%;
+	margin-left: 0%;
+}
+
+.idioma_icon{
+	color: #FFFFFF;
+	font-size: 13pt;
+	margin-right: 15px;
+}
+
+.user_icon{
+	color: #FFFFFF;
+	font-size: 20pt;
+	margin-right: 15px;
+}
+
+.conf{
+    background-color: #585858;
+    border: 1px solid #848484;
+	margin-right: 15px;
+}
+
+
 
 

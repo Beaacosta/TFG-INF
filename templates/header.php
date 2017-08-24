@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cattle managers</title>
-
-    <!-- Bootstrap -->
-    <link href="/TFG-INF/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/TFG-INF/css/style.css" rel="stylesheet">
-  </head>
-
-  <body>
+<div class="row cabecera">
+		<div class="col-xs-12 col-md-6">
+		 	<a href="" class="idioma_icon">
+	  			<span class="glyphicon glyphicon-flag" aria-hidden="true">English</span>
+			</a>
+			<a href="" class="idioma_icon">
+	 		 	<span class="glyphicon glyphicon-flag" aria-hidden="true">Español</span>
+			</a>
+		</div>
+		<div class="col-xs-12 col-md-6 align-right">
+			<button type="button" class="btn conf">
+	  			<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+			</button>
+			<span>blablabla@gmail.com</span>
+		</div>
+</div>
