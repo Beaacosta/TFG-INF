@@ -1,4 +1,4 @@
-<div class="row cabecera">
+<div class="row header">
 		<div class="col-xs-12 col-md-6">
 		 	<a href="" class="idioma_icon">
 	  			<span class="glyphicon glyphicon-flag" aria-hidden="true">English</span>

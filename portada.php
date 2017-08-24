@@ -4,6 +4,7 @@
 
 <?php include(ABSPATH . 'templates/head.php');?>
 <?php include(ABSPATH . 'templates/header.php');?>
+<?php include(ABSPATH . 'templates/navbar.php');?>
 
 <div id="ppal" class="container-fluid">
 	<div clas="row">
