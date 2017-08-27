@@ -462,5 +462,12 @@ li {
 	width: 100%;
 }
 
+/* Editar perfil */
 
+.titulo_paginas{
+	color: #186A3B;
+	font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-top: 3%;
+}
 

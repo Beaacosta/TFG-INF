@@ -6,7 +6,7 @@
 <?php include(ABSPATH . 'templates/header.php');?>
 <?php include(ABSPATH . 'templates/navbar.php');?>
 
-<div id="ppal" class="container-fluid">
+<div id="ppal" class="container">
 
 	<div clas="row">
 		<div class="col-xs-12" id="caja_tiempo">

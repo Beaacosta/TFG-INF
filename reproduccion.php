@@ -6,7 +6,7 @@
 <?php include(ABSPATH . 'templates/header.php');?>
 <?php include(ABSPATH . 'templates/navbar.php');?>
 
-<div id="reproduccion" class="container-fluid">
+<div id="reproduccion" class="container">
 	<div clas="row">
 		<p>blablablablabalal</p>
 	</div>

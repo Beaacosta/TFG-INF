@@ -5,7 +5,7 @@
 <?php include(ABSPATH . 'templates/head.php');?>
 <?php include(ABSPATH . 'templates/header.php');?>
 
-<div class="container-fluid">
+<div class="container">
 		<div class="row" id="editar_perfil">
 			<?php include(ABSPATH . 'templates/nav_perfil.php');?>
 			<div class="col-xs-9" id="editar_perfil_dcha">
