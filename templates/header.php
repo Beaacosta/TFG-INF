@@ -12,14 +12,20 @@
 		</div>
 		<div class="col-xs-12 col-md-4 align-right">
 			<span>blablabla@gmail.com</span>
-			 <button class="btn conf" type="button">
-			    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-			 </button>
-			 <button class="btn conf" type="button">
-			    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-			 </button>
-			<button class="btn conf" type="button">
-			    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-			 </button>
+			<form method="GET" action="/TFG-INF/index.php?accion=cerrar_sesion" style="float: right;">
+				<button class="btn conf" type="submit">
+				    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+				 </button>
+			 </form>
+			 <form method="GET" action="/TFG-INF/portada.php" style="float: right;">
+				 <button class="btn conf" type="submit">
+				    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+				 </button>
+			 </form>
+			<form method="GET" action="/TFG-INF/perfil.php" style="float: right;">
+				 <button class="btn conf" type="submit">
+				    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+				 </button>
+			 </form>	 
 		</div>
 </div>

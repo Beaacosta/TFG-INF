@@ -73,4 +73,13 @@ function do_registrarse(){
 	exit;
 }
 
+function do_logout(){
+	if( session_status() != PHP_SESSION_ACTIVE ){
+		session_start();
+	}
+	session_destroy();
+	header('Location:' . $_SERVER['PHP_SELF'] );
+	exit;
+}
+
  ?>
