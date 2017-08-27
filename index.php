@@ -3,6 +3,7 @@
 <?php  require_once(ABSPATH . 'functions/front-controller.php');?>
 
 <?php include(ABSPATH . 'templates/head.php');?>
+  
 
 <div id="portadaPpal" class="container-fluid">
 	<div class="row" id="portada">

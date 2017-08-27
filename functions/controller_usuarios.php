@@ -25,6 +25,7 @@ function do_iniciar_sesion(){
 		session_start();
 	}
 	$_SESSION['user'] = $user;
+	$_SESSION['msg'] = 'no_msg';
 	//CAMBIAR A PAGINA SIGUIENTE
 	header('Location:'.$_SERVER['PHP_SELF'].'?e=OK_USER_LOGGED');
 	exit;
@@ -69,6 +70,7 @@ function do_registrarse(){
 		'username' 	=> $username,
 		'role'		=> 1
 	);
+	$_SESSION['msg'] = 'no_msg';
 	header('Location:' . $_SERVER['PHP_SELF'] . '?e=OK_USER_REG');
 	exit;
 }
@@ -77,6 +79,7 @@ function do_logout(){
 	if( session_status() != PHP_SESSION_ACTIVE ){
 		session_start();
 	}
+	$_SESSION = array();
 	session_destroy();
 	header('Location:' . $_SERVER['PHP_SELF'] );
 	exit;

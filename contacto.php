@@ -26,19 +26,17 @@
                 session_start();
                 if($_SESSION['msg'] == 'ok'):?>
                 <div id="sendmessage">
-                  <p>Tu mensaje ha sido enviado con éxito. Muchas gracias por ponerte en contacto con nosotros</p>
+                  <p style="color: green; margin-bottom: 0%;">Tu mensaje ha sido enviado con éxito. Muchas gracias por ponerte en contacto con nosotros</p>
                 </div>
                 <?php endif; ?>
                 <?php if($_SESSION['msg'] == 'error'):?>
                 <div id="errormessage">
-                  <p>Complete todos los campos, por favor</p>
+                  <p style="color: red; margin-bottom: 0%;">Complete todos los campos, por favor</p>
                 </div>
                 <?php 
                   endif; 
-                  session_start();
                   if($_SESSION['msg'] == 'ok'||$_SESSION['msg'] == 'error'){
-                    $_SESSION = array();
-                    session_destroy();
+                    $_SESSION ['msg'] = 'no_msg';
                   }
 
                  ?>

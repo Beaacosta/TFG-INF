@@ -1,10 +1,10 @@
 <?php 
   
   //importante que donde pone nombre email y mensaje pongas lo que tengas en los atributos name de tu formulario en el index.php
-  if($_SESSION['msg'] == 'ok'||$_SESSION['msg'] == 'error'){
+
+  if($_SESSION['msg'] == 'ok'||$_SESSION['msg'] == 'error'||is_null($_SESSION['msg'])){
       session_start();
-      $_SESSION = array();
-      session_destroy();
+      $_SESSION['msg'] = 'no_msg';
   }
 
   if(!$_POST['nombre']||!$_POST['email']||!$_POST['mensaje']){
@@ -35,7 +35,7 @@
   }
 
   //Esto simplemente redirige a mi pagina principal
-  header('Location:' . $_SERVER['PHP_SELF'] );
+  header('Location: ../contacto.php' );
 
 
  ?>
