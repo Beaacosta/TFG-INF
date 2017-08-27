@@ -11,9 +11,12 @@
 		 	<h2 style="color:#FFFFFF; margin-bottom: 0%;">Cattle Manager</h2>
 		</div>
 		<div class="col-xs-12 col-md-4 align-right">
-			<button type="button" class="btn conf">
-	  			<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-			</button>
 			<span>blablabla@gmail.com</span>
+			 <button class="btn conf" type="button">
+			    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+			 </button>
+			<button class="btn conf" type="button">
+			    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+			 </button>
 		</div>
 </div>

@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="row" id="inicioSesion">
-		<form method="POST" action="<?=$_SERVER['PHP_SELF']?>?accion=iniciar_sesion">
+		<form method="POST" action="/TFG-INF/portada.php?accion=iniciar_sesion">
 	 		<div class="form-group">
 	   			<label for="email">Email</label>
 	    		<input type="text" name="email" class="form-control" id="email" placeholder="example@gmail.com">
