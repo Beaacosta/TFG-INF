@@ -17,23 +17,20 @@
 						<input type="text" class="form-control" value="${usuario_sesion.nombre}" name="Nombre" id="Nombre" placeholder="Nombre" aria-describedly="basic-addon1">
 					</div>
 					<div class="input-group input_espaciado">
-						<span class="input-group-addon" id="basic-addon1">Apellidos</span>
-						<input type="text" class="form-control" value="${usuario_sesion.apellidos}"name="Apellidos" id="Apellidos" placeholder="Apellidos" aria-describedly="basic-addon1">
+						<span class="input-group-addon" id="basic-addon1">Primer Apellido</span>
+						<input type="text" class="form-control" value="${usuario_sesion.apellidos}" name="Apellidos" id="Apellidos" placeholder="Apellidos" aria-describedly="basic-addon1">
+					</div>
+					<div class="input-group input_espaciado">
+						<span class="input-group-addon" id="basic-addon1">Segundo Apellido</span>
+						<input type="text" class="form-control" value="${usuario_sesion.mail}" name="Email" id="Email" placeholder="Email" aria-describedly="basic-addon1">
 					</div>
 					<div class="input-group input_espaciado">
 						<span class="input-group-addon" id="basic-addon1">Email</span>
-						<input type="text" class="form-control" value="${usuario_sesion.mail}"name="Email" id="Email" placeholder="Email" aria-describedly="basic-addon1">
+						<input type="text" class="form-control" value="${usuario_sesion.ciudad}" name="Ciudad" id="Ciudad" placeholder="Ciudad" aria-describedly="basic-addon1">
 					</div>
-					<div class="input-group input_espaciado">
-						<span class="input-group-addon" id="basic-addon1">Ciudad</span>
-						<input type="text" class="form-control" value="${usuario_sesion.ciudad}"name="Ciudad" id="Ciudad" placeholder="Ciudad" aria-describedly="basic-addon1">
-					</div>
-					<button type="hidden" class="" name="accion" value="Baja">Dar de baja de la aplicación</button>
-					<br>
-					<br>
-					<button type="hidden" class="btn btn-default" name="accion" value="Guardar">Guardar cambios</button>	
+					<button type="hidden" class="btnPpal btn btn-lg btn-block" name="accion" style="float: right;">Guardar cambios</button>	
 				</form>
-				<a href="PaginaPrincipal.jsp" class="btn btn-default">Ir a inicio</a>
+				<a href="#" style="float: right; margin-top: 3%; color: grey;">Dar de baja de la aplicación</a>
 				
 			</div>
 		</div>

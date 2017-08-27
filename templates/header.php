@@ -15,6 +15,9 @@
 			 <button class="btn conf" type="button">
 			    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
 			 </button>
+			 <button class="btn conf" type="button">
+			    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+			 </button>
 			<button class="btn conf" type="button">
 			    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
 			 </button>

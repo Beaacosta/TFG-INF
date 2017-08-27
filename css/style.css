@@ -408,7 +408,7 @@ li {
 }
 
 #editar_perfil_izda{
-	height: 410px;
+	height: 430px;
 	background-color: #E6F7EA;
 	padding-top: 1%;
 	padding-left: 2%;
@@ -448,6 +448,18 @@ li {
 
 .nombre_usuario_perfil{
 	margin-bottom: 0%;
+}
+
+.input-group{
+	margin-bottom: 2%;
+}
+
+.input-group-addon{
+	width: 20%;
+}
+
+.input-group{
+	width: 100%;
 }
 
 
