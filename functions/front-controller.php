@@ -6,5 +6,6 @@ switch ($accion) {
 	case 'iniciar_sesion': do_iniciar_sesion(); break;
 	case 'registrarse': do_registrarse(); break;
 	case 'cerrar_sesion': do_cerrar_sesion(); break;
+	case 'anyadir_explotacion': do_anyadir_explotacion(); break;
 }
 ?>

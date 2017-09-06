@@ -311,15 +311,15 @@ li {
 	margin-bottom: 5%;
 	text-align: center;
 	padding: 2%;
-	background-color: #FF5733;
- 	box-shadow: inset 0 0 0 3px #FF5733;
-	border-color: #FF5733;
+	background-color: #F9A865;
+ 	box-shadow: inset 0 0 0 3px #F9A865;
+	border-color: #F9A865;
 	border-radius: 8px;
 }
 
 #caja_animales:hover {
  background: rgba(0,0,0,0);
- box-shadow: inset 0 0 0 3px #FF5733;
+ box-shadow: inset 0 0 0 3px #F9A865;
 }
 
 #caja_explotaciones{
@@ -502,3 +502,19 @@ li {
 #sendmessage, #errormessage{
     display:block;
 }
+
+/* Tablas */
+
+.btn-mas{
+	margin-right: 5%;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #227A4B;
+	border-radius: 50px;
+	padding: 10px;
+}
+
+
+
+
+

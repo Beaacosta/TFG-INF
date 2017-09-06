@@ -27,7 +27,7 @@ function do_iniciar_sesion(){
 	$_SESSION['user'] = $user;
 	$_SESSION['msg'] = 'no_msg';
 	//CAMBIAR A PAGINA SIGUIENTE
-	header('Location:'.$_SERVER['PHP_SELF'].'?e=OK_USER_LOGGED');
+	header('Location:/TFG-INF/portada.php?e=OK_USER_LOGGED');
 	exit;
 }
 
