@@ -29,4 +29,22 @@ function do_anyadir_explotacion(){
 	header('Location:' . $_SERVER['PHP_SELF'] . '?e=OK_EXPLOTACION_REG');
 }
 
+function do_eliminar_explotacion(){
+	global $link;
+	$id = filter_input(INPUT_GET, 'eid');
+	$id = (int) $id;
+	if(!$id){
+		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_VOID');
+		exit;
+	}
+	$sql = "DELETE FROM explotaciones WHERE id = $id";
+	$return = mysqli_query($link,$sql);
+	if( mysqli_affected_rows($link) > 0 ){
+		header('Location:' . $_SERVER['PHP_SELF'] . '?e=OK_EXPLOTACION_DELETE');
+	}else{
+		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_DELETE');
+	}
+	exit;
+}
+
  ?>
