@@ -25,13 +25,13 @@
                 <?php 
                 session_start();
                 if($_SESSION['msg'] == 'ok'):?>
-                <div id="sendmessage">
-                  <p style="color: green; margin-bottom: 0%;">Tu mensaje ha sido enviado con éxito. Muchas gracias por ponerte en contacto con nosotros</p>
+                <div>
+                  <p class="alert alert-success">Tu mensaje ha sido enviado con éxito. Muchas gracias por ponerte en contacto con nosotros</p>
                 </div>
                 <?php endif; ?>
                 <?php if($_SESSION['msg'] == 'error'):?>
-                <div id="errormessage">
-                  <p style="color: red; margin-bottom: 0%;">Complete todos los campos, por favor</p>
+                <div>
+                  <p class="alert alert-danger">Complete todos los campos, por favor</p>
                 </div>
                 <?php 
                   endif; 

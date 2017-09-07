@@ -1,14 +1,17 @@
 	<!--  Formulario para Registrarse en la aplicación -->
-	<div class="modal fade align-left" id="ventanaExplotacion">
+	<div class="modal fade align-left" id="editarExplotacion">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=anyadir_explotacion">
+			<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=editar_explotacion">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Añadir una Nueva Explotación</h4>
+					<h4 class="modal-title">Editar una Explotación</h4>
 				</div>
 				<div class="modal-body">
+					<div class="form-group">
+						<label for="id_explotacion">Id</label> <input type="text" name="id_explotacion" class="form-control" id="id_explotacion" disabled>
+					</div>
 					<div class="form-group">
 						<label for="codigo_explotacion">Código de explotación</label> <input type="text" name="codigo_explotacion" class="form-control" id="codigo_explotacion" placeholder="12345678ABC">
 					</div>
@@ -48,6 +51,12 @@
 				          </div>
 				        </div>
 				    </fieldset>
+				    <div class="form-group">
+						<label for="fecha_alta_explotacion">Fecha de alta</label> <input type="text" name="fecha_alta_explotacion" class="form-control" id="fecha_alta_explotacion" placeholder="01/01/2012">
+					</div>
+					<div class="form-group">
+						<label for="fecha_baja_explotacion">Fecha de baja</label> <input type="text" name="fecha_baja_explotacion" class="form-control" id="fecha_baja_explotacion" placeholder="01/01/2012">
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="hidden" class="btn btn-default"

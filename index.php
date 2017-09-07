@@ -25,7 +25,7 @@
 	  		<button type="submit" class="btnPpal btn btn-lg btn-block">Iniciar Sesión</button>
 	  		<br>
 		</form>
-		<a href="" data-toggle="modal" data-target="#ventanaRegistro"><p class="text-center">Si aún no estás registrado pulse aquí.</p></a>	
+		<a href="#" data-toggle="modal" data-target="#ventanaRegistro"><p class="text-center">Si aún no estás registrado pulse aquí.</p></a>
 		<?php include(ABSPATH . 'templates/registroUsuario.php');?>
 	</div>
 </div>

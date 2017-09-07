@@ -30,8 +30,8 @@
 					</div>
 					<button type="hidden" class="btnPpal btn btn-lg btn-block" name="accion" style="float: right;">Guardar cambios</button>	
 				</form>
-				<a href="#" style="float: right; margin-top: 3%; color: grey;">Dar de baja de la aplicación</a>
-				
+				<a href="#" style="float: right; margin-top: 3%; color: grey;" data-toggle="modal" data-target="#eliminarUsuario">Dar de baja de la aplicación</a>
+				<?php include(ABSPATH . 'templates/eliminarUsuario.php');?>
 			</div>
 		</div>
 	</div>

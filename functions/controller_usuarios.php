@@ -85,4 +85,22 @@ function do_logout(){
 	exit;
 }
 
+function do_eliminar_usuario(){
+	global $link;
+	$id = filter_input(INPUT_GET, 'uid');
+	$id = (int) $id;
+	if(!$id){
+		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_USER_VOID');
+		exit;
+	}
+	$sql = "DELETE FROM users WHERE id = $id";
+	$return = mysqli_query($link,$sql);
+	if( mysqli_affected_rows($link) > 0 ){
+		header('Location:' . $_SERVER['PHP_SELF'] . '?e=OK_USER_DELETE');
+	}else{
+		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_USER_DELETE');
+	}
+	exit;
+}
+
  ?>
