@@ -26,7 +26,7 @@
 	  		<br>
 		</form>
 		<a href="#" data-toggle="modal" data-target="#ventanaRegistro"><p class="text-center">Si aún no estás registrado pulse aquí.</p></a>
-		<?php include(ABSPATH . 'templates/registroUsuario.php');?>
+		<?php include(ABSPATH . 'templates/usuarios/registroUsuario.php');?>
 	</div>
 </div>
 <div id="caracteristicas" class="container-fluid">

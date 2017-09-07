@@ -16,7 +16,7 @@
 	<div class="row">
 		<div class="col-xs-12 align-right">
 				<a href="" data-toggle="modal" data-target="#ventanaExplotacion" class="btn-mas"><span>Nueva Explotación</span></a>	
-				<?php include(ABSPATH . 'templates/registroExplotacion.php');?>
+				<?php include(ABSPATH . 'templates/explotaciones/registroExplotacion.php');?>
 		</div>
 	</div>
 	<div class="row">
@@ -47,8 +47,8 @@
 						<td class="tipo-col">tipo</td>
 						<td class="fecha_alta-col">fecha_alta</td>
 						<td class="fecha_baja-col">fecha_baja</td>
-						<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/editarExplotacion.php');?></td>
-							<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarExplotacion"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/eliminarExplotacion.php');?></td>	
+						<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/explotaciones/editarExplotacion.php');?></td>
+							<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarExplotacion"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/explotaciones/eliminarExplotacion.php');?></td>	
 					</tr>
 			</tbody>
 		</table>
@@ -82,8 +82,8 @@
 							<td class="tipo-col">tipo</td>
 							<td class="fecha_alta-col">fecha_alta</td>
 							<td class="fecha_baja-col">fecha_baja</td>
-							<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/editarExplotacion.php');?></td>
-							<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarExplotacion"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/eliminarExplotacion.php');?></td>	
+							<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/explotaciones/editarExplotacion.php');?></td>
+							<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarExplotacion"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/explotaciones/eliminarExplotacion.php');?></td>	
 						</tr>
 				</tbody>
 			</table>
