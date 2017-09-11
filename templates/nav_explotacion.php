@@ -1,4 +1,4 @@
-<div id="explotaciones" class="container">
+<div id="nav_explotacion" class="container">
 	<div clas="row">
 		<div class="col-md-12 text-center">
             <h2 class="titulo_paginas">Cod_Explotacion: Nombre_Explotacion</h2>
