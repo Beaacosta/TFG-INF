@@ -12,5 +12,13 @@ switch ($accion) {
 	case 'anyadir_explotacion': do_anyadir_explotacion(); break;
 	case 'editar_explotacion': do_editar_explotacion(); break;
 	case 'eliminar_explotacion': do_eliminar_explotacion(); break;
+	//Parcelas
+	case 'anyadir_parcela': do_anyadir_parcela(); break;
+	case 'editar_parcela': do_editar_parcela(); break;
+	case 'eliminar_parcela': do_eliminar_parcela(); break;
+	//Fincas
+	case 'anyadir_finca': do_anyadir_finca(); break;
+	case 'editar_finca': do_editar_finca(); break;
+	case 'eliminar_finca': do_eliminar_finca(); break;
 }
 ?>
