@@ -32,7 +32,7 @@
 			<?php include(ABSPATH . 'templates/fincas/registroParcela.php');?>
 			<?php include(ABSPATH . 'templates/fincas/editarFinca.php');?> 
 			<?php include(ABSPATH . 'templates/fincas/eliminarFinca.php');?>
-			<p>Dirección, municipio, provincia</p>	
+			<p>Dirección, municipio, provincia, agregado, zona</p>	
 		</div>
 	</div>
 	<div class="row">
