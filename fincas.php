@@ -21,41 +21,45 @@
 			<?php include(ABSPATH . 'templates/fincas/registroParcela.php');?>
 		</div>
 	</div>
+<div class="caja_finca">
 	<div class="row">
 		<div class="col-xs-12 titulo_tabla">
-			<h3>Nombre de la finca <a href="" style="color: #227A4B; margin-left: 20px;" data-toggle="modal" data-target="#editarFinca" class="glyphicon glyphicon-pencil"></a>			
+			<h3>Nombre de la finca 
+			<a href="" style="color: #227A4B; margin-left: 20px;" data-toggle="modal" data-target="#ventanaParcela" class="glyphicon glyphicon-plus"></a>
+			<a href="" style="color: #227A4B; margin-left: 4px;" data-toggle="modal" data-target="#editarFinca" class="glyphicon glyphicon-pencil"></a>		
 			<a href="" style="color: #227A4B; margin-left: 4px;" data-toggle="modal" data-target="#eliminarFinca"  class="glyphicon glyphicon-remove"></a>
 			</h3>
+			<?php include(ABSPATH . 'templates/fincas/registroParcela.php');?>
 			<?php include(ABSPATH . 'templates/fincas/editarFinca.php');?> 
 			<?php include(ABSPATH . 'templates/fincas/eliminarFinca.php');?>
 			<p>Dirección, municipio, provincia</p>	
 		</div>
 	</div>
-<div class="row">
-	<div class="col-xs-12">
-		<table class="table">
-			<thead>
-				<tr>
-					<th class="id-col">ID</th>
-					<th class="poligono-col">Polígono </th>
-					<th class="parcela-col">Parcela</th>
-					<th class="superficie-col">Superficie</th>
-				</tr>
-			</thead>
-			<tbody>
+	<div class="row">
+		<div class="col-xs-12">
+			<table class="table">
+				<thead>
 					<tr>
-						<td class="id-col">id</td>
-						<td class="poligono-col">polígono</td>
-						<td class="parcela-col">parcela</td>
-						<td class="superficie-col">superficie</td>
-						<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarParcela" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/fincas/editarParcela.php');?></td>
-							<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarParcela"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/fincas/eliminarParcela.php');?></td>	
+						<th class="id-col">ID</th>
+						<th class="poligono-col">Polígono </th>
+						<th class="parcela-col">Parcela</th>
+						<th class="superficie-col">Superficie</th>
 					</tr>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+						<tr>
+							<td class="id-col">id</td>
+							<td class="poligono-col">polígono</td>
+							<td class="parcela-col">parcela</td>
+							<td class="superficie-col">superficie</td>
+							<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarParcela" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/fincas/editarParcela.php');?></td>
+								<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarParcela"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/fincas/eliminarParcela.php');?></td>	
+						</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>
-
 	<div class="row">
 		<div class="col-xs-12">
 			<p class="alert alert-warning">No se han encontrado resultados</p>
