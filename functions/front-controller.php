@@ -20,5 +20,13 @@ switch ($accion) {
 	case 'anyadir_finca': do_anyadir_finca(); break;
 	case 'editar_finca': do_editar_finca(); break;
 	case 'eliminar_finca': do_eliminar_finca(); break;
+	//Movimientos_Altas
+	case 'anyadir_alta': do_anyadir_alta(); break;
+	case 'editar_alta': do_editar_alta(); break;
+	case 'eliminar_alta': do_eliminar_alta(); break;
+	//Movimientos_Bajas
+	case 'anyadir_baja': do_anyadir_baja(); break;
+	case 'editar_baja': do_editar_baja(); break;
+	case 'eliminar_baja': do_eliminar_baja(); break;
 }
 ?>
