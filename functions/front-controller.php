@@ -28,5 +28,13 @@ switch ($accion) {
 	case 'anyadir_baja': do_anyadir_baja(); break;
 	case 'editar_baja': do_editar_baja(); break;
 	case 'eliminar_baja': do_eliminar_baja(); break;
+	//Nacimientos
+	case 'anyadir_nacimiento': do_anyadir_nacimiento(); break;
+	case 'editar_nacimiento': do_editar_nacimiento(); break;
+	case 'eliminar_nacimiento': do_eliminar_nacimiento(); break;
+	//Embarazos
+	case 'anyadir_embarazo': do_anyadir_embarazo(); break;
+	case 'editar_embarazo': do_editar_embarazo(); break;
+	case 'eliminar_embarazo': do_eliminar_embarazo(); break;
 }
 ?>
