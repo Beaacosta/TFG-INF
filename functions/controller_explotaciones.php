@@ -61,7 +61,7 @@ function do_obtener_explotaciones_alta(){
 
 function do_obtener_explotaciones_baja(){
 	global $link;
-	$sql = "SELECT id, cod_explotacion, nombre, municipio, tipo, fecha_alta, fecha_baja  FROM explotaciones WHERE fecha_baja IS NOT NULL
+	$sql = "SELECT * FROM explotaciones WHERE fecha_baja IS NOT NULL
 			ORDER BY fecha_alta";
 	$result = mysqli_query($link,$sql);
 	$num_rows = mysqli_num_rows($result);
