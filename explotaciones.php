@@ -63,7 +63,7 @@
 						<td class="fecha_alta-col"><?= $explotacion['fecha_alta']?></td>
 						<td class="fecha_baja-col"> - </td>
 						<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/explotaciones/editarExplotacion.php');?></td>
-							<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarExplotacion"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/explotaciones/eliminarExplotacion.php');?></td>	
+							<td class="remove-col"><a href="" data-toggle="modal" data-target="#bajaExplotacion"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/explotaciones/bajaExplotacion.php');?></td>	
 					</tr>
 				<?php endforeach; 
 				?>
@@ -107,7 +107,7 @@
 					$nombre_provincia=$nombre_provincia['provincia'];
 				?>
 						<tr>
-							<td class="id-col">id</td>
+							<td class="id-col"><?= $explotacion['id']?></td>
 							<td class="codigo_explotacion-col"><?= $explotacion['codigo_explotacion']?></td>
 							<td class="nombre-col"><?= $explotacion['nombre']?></td>
 							<th class="provincia-col"><?=$nombre_provincia?></th>

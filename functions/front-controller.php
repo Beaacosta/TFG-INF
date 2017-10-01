@@ -12,6 +12,8 @@ switch ($accion) {
 	case 'anyadir_explotacion': do_anyadir_explotacion(); break;
 	case 'editar_explotacion': do_editar_explotacion(); break;
 	case 'eliminar_explotacion': do_eliminar_explotacion(); break;
+	case 'baja_explotacion':
+		do_dar_baja_explotacion(); break;
 	//Parcelas
 	case 'anyadir_parcela': do_anyadir_parcela(); break;
 	case 'editar_parcela': do_editar_parcela(); break;

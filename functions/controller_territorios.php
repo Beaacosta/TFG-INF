@@ -58,5 +58,17 @@ function do_get_provincia_by_municipio($id){
 
 	return mysqli_fetch_assoc($result);
 }
+
+function do_obtener_provincias(){
+	global $link;
+	$sql = "SELECT * FROM provincias 
+			ORDER BY provincia";
+	$result = mysqli_query($link,$sql);
+	$num_rows = mysqli_num_rows($result);
+	if( $num_rows < 1 ){
+		return false;
+	}
+	return $result;	
+}
  ?>
 

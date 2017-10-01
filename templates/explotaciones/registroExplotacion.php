@@ -1,3 +1,6 @@
+<?php 
+$data_provincias = do_obtener_provincias();
+ ?>
 	<!--  Formulario para Registrarse en la aplicación -->
 	<div class="modal fade align-left" id="ventanaExplotacion">
 	<div class="modal-dialog">
@@ -18,9 +21,9 @@
 					<div class="form-group">
 						<label for="provincia">Provincia</label>
 					    <select class="form-control" name="provincia" id="provincia">
-					      <option value="4">4</option>
-					      <option value="5">5</option>
-					      <option value="6">6</option>
+					    	<?php foreach($data_provincias as $prov):?>
+					      <option value="<?= $prov['id']?>"><?= $prov['provincia']?></option>
+					      	<?php endforeach; ?>
 					    </select>
 					</div>
 					<div class="form-group">
