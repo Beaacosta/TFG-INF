@@ -77,6 +77,7 @@
 					<th class="id-col">ID</th>
 					<th class="madre-col">Madre</th>
 					<th class="tipo-col">Tipo</th>
+					<th class="sexo-col">Sexo</th>
 					<th class="comentarios-col">Comentarios</th>
 					<th class="fecha_real-col">Fecha real</th>
 				</tr>
@@ -86,6 +87,7 @@
 						<td class="id-col">id</td>
 						<td class="madre-col">madre</td>
 						<td class="tipo-col">tipo</td>
+						<td class="sexo-col">sexo</td>
 						<td class="comentarios-col">comentarios</td>
 						<td class="fecha_real-col">fecha real</td>
 						<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarNacimiento" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/reproduccion/editarNacimiento.php');?></td>

@@ -25,11 +25,9 @@
 	<div class="row">
 		<div class="col-xs-12 titulo_tabla">
 			<h3>Nombre de la finca 
-			<a href="" style="color: #227A4B; margin-left: 20px;" data-toggle="modal" data-target="#ventanaParcela" class="glyphicon glyphicon-plus"></a>
-			<a href="" style="color: #227A4B; margin-left: 4px;" data-toggle="modal" data-target="#editarFinca" class="glyphicon glyphicon-pencil"></a>		
+			<a href="" style="color: #227A4B; margin-left: 20px;" data-toggle="modal" data-target="#editarFinca" class="glyphicon glyphicon-pencil"></a>		
 			<a href="" style="color: #227A4B; margin-left: 4px;" data-toggle="modal" data-target="#eliminarFinca"  class="glyphicon glyphicon-remove"></a>
 			</h3>
-			<?php include(ABSPATH . 'templates/fincas/registroParcela.php');?>
 			<?php include(ABSPATH . 'templates/fincas/editarFinca.php');?> 
 			<?php include(ABSPATH . 'templates/fincas/eliminarFinca.php');?>
 			<p>Dirección, municipio, provincia, agregado, zona</p>	
