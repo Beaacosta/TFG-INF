@@ -7,7 +7,7 @@ function do_anyadir_explotacion(){
 	$provincia = filter_input(INPUT_POST, 'provincia');
 	$municipio = filter_input(INPUT_POST, 'municipio');
 	$tipo = filter_input(INPUT_POST, 'tipo');
-	$fecha_alta = date_default_timezone_get();
+	$fecha_alta = date('Y-m-d H:i:s');
 	if( !$codigo_explotacion || !$nombre || !$provincia || !$municipio || !$tipo ){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_VOID');
 		exit;
@@ -19,7 +19,7 @@ function do_anyadir_explotacion(){
 		exit;
 	}
 	//$password = password_hash($password,PASSWORD_DEFAULT);
-	$sql = "INSERT INTO explotaciones(codigo_explotacion,nombre,municipio,tipo,fecha_alta) VALUES('$codigo_explotacion','$nombre','$municipio','$tipo', '$fecha_alta')";
+	$sql = "INSERT INTO explotaciones(codigo_explotacion,nombre,municipio,tipo,fecha_alta) VALUES('$codigo_explotacion','$nombre','$municipio','$tipo','$fecha_alta')";
 	$result = mysqli_query($link,$sql);
 	$id = mysqli_insert_id($link);
 	if( !$id ){
@@ -45,6 +45,30 @@ function do_eliminar_explotacion(){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_DELETE');
 	}
 	exit;
+}
+
+function do_obtener_explotaciones_alta(){
+	global $link;
+	$sql = "SELECT * FROM explotaciones WHERE fecha_baja IS NULL
+			ORDER BY fecha_alta";
+	$result = mysqli_query($link,$sql);
+	$num_rows = mysqli_num_rows($result);
+	if( $num_rows < 1 ){
+		return false;
+	}
+	return $result;	
+}
+
+function do_obtener_explotaciones_baja(){
+	global $link;
+	$sql = "SELECT id, cod_explotacion, nombre, municipio, tipo, fecha_alta, fecha_baja  FROM explotaciones WHERE fecha_baja IS NOT NULL
+			ORDER BY fecha_alta";
+	$result = mysqli_query($link,$sql);
+	$num_rows = mysqli_num_rows($result);
+	if( $num_rows < 1 ){
+		return false;
+	}
+	return $result;	
 }
 
  ?>

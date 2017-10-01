@@ -5,4 +5,5 @@ require_once( ABSPATH . 'functions/controller_explotaciones.php');
 require_once( ABSPATH . 'functions/controller_fincas.php');
 require_once( ABSPATH . 'functions/controller_movimientos.php');
 require_once( ABSPATH . 'functions/controller_reproduccion.php');
+require_once( ABSPATH . 'functions/controller_territorios.php');
 ?>
