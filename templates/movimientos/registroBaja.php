@@ -12,7 +12,7 @@
 					<div class="form-group">
 						<label for="animal">Animal</label>
 					    <select class="form-control" name="animal" id="animal">
-					      <option value="4">4</option>
+					      <option value="1">1</option>
 					      <option value="5">5</option>
 					      <option value="6">6</option>
 					    </select>

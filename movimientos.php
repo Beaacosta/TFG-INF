@@ -6,6 +6,11 @@
 <?php include(ABSPATH . 'templates/header.php');?>
 <?php include(ABSPATH . 'templates/navbar.php');?>
 
+<?php 
+	$data_mov_alta = do_obtener_movimientos_alta();
+	$data_mov_baja = do_obtener_movimientos_baja();
+ ?>
+
 <div id="movimientos" class="container">
 	<div clas="row">
 		<div class="col-md-12 text-center">
@@ -39,15 +44,18 @@
 				</tr>
 			</thead>
 			<tbody>
+				<?php foreach($data_mov_alta as $altas): 
+				?>
 					<tr>
-						<td class="id-col">id</td>
-						<td class="animal-col">animal</td>
-						<td class="causa-col">causa</td>
-						<td class="origen-col">origen</td>
-						<td class="fecha_alta-col">fecha_alta</td>
+						<td class="id-col"><?= $altas['id']?></td>
+						<td class="animal-col"><?= $altas['animal']?></td>
+						<td class="causa-col"><?= $altas['causa']?></td>
+						<td class="origen-col"><?= $altas['origen']?></td>
+						<td class="fecha_alta-col"><?= $altas['fecha_alta']?></td>
 						<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarAlta" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/movimientos/editarAlta.php');?></td>
 						<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarAlta"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/movimientos/eliminarAlta.php');?></td>	
 					</tr>
+				<?php endforeach; ?>
 			</tbody>
 		</table>
 	</div>
@@ -70,15 +78,18 @@
 				</tr>
 			</thead>
 			<tbody>
+				<?php foreach($data_mov_baja as $bajas): 
+				?>
 					<tr>
-						<td class="id-col">id</td>
-						<td class="animal-col">animal</td>
-						<td class="causa-col">causa</td>
-						<td class="destino-col">destino</td>
-						<td class="fecha_baja-col">fecha_baja</td>
+						<td class="id-col"><?= $bajas['id']?></td>
+						<td class="animal-col"><?= $bajas['animal']?></td>
+						<td class="causa-col"><?= $bajas['causa']?></td>
+						<td class="destino-col"><?= $bajas['destino']?></td>
+						<td class="fecha_baja-col"><?= $bajas['fecha_baja']?></td>
 						<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarBaja" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/movimientos/editarBaja.php');?></td>
 						<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarBaja"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/movimientos/eliminarBaja.php');?></td>	
 					</tr>
+				<?php endforeach; ?>
 			</tbody>
 		</table>
 	</div>

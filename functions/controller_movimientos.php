@@ -5,7 +5,7 @@ function do_anyadir_alta(){
 	$animal = filter_input(INPUT_POST, 'animal');
 	$causa = filter_input(INPUT_POST, 'causa');
 	$origen = filter_input(INPUT_POST, 'origen');
-	$fecha_alta = date_default_timezone_get();
+	$fecha_alta = date('Y-m-d H:i:s');
 	if( !$animal || !$causa || !$fecha_alta){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_MOVIMIENTOALTA_VOID');
 		exit;
@@ -67,7 +67,6 @@ function do_eliminar_alta(){
 	}else{
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_MOVIMIENTOALTA_DELETE');
 	}
-	exit;
 }
 
 function do_eliminar_baja(){
@@ -78,14 +77,35 @@ function do_eliminar_baja(){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_MOVIMIENTOBAJA_VOID');
 		exit;
 	}
-	$sql = "DELETE FROM movimientos_alta WHERE id = $id";
+	$sql = "DELETE FROM movimientos_baja WHERE id = $id";
 	$return = mysqli_query($link,$sql);
 	if( mysqli_affected_rows($link) > 0 ){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=OK_MOVIMIENTOBAJA_DELETE');
 	}else{
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_MOVIMIENTOBAJA_DELETE');
 	}
-	exit;
+}
+
+function do_obtener_movimientos_alta(){
+	global $link;
+	$sql = "SELECT * FROM movimientos_alta ORDER BY fecha_alta";
+	$result = mysqli_query($link,$sql);
+	$num_rows = mysqli_num_rows($result);
+	if( $num_rows < 1 ){
+		return false;
+	}
+	return $result;	
+}
+
+function do_obtener_movimientos_baja(){
+	global $link;
+	$sql = "SELECT * FROM movimientos_baja ORDER BY fecha_baja";
+	$result = mysqli_query($link,$sql);
+	$num_rows = mysqli_num_rows($result);
+	if( $num_rows < 1 ){
+		return false;
+	}
+	return $result;	
 }
 
 
