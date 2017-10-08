@@ -10,7 +10,7 @@
 				    <p>¿Estás seguro de que deseas darte de baja de la aplicación?</p>
 				</div>
 				<div class="modal-footer">
-					<form method="POST" action="/TFG-INF/perfil.php?accion=eliminar_usuario&uid=1">
+					<form method="POST" action="/TFG-INF/perfil.php?accion=eliminar_usuario&uid=<?= $usuario['id'] ?>">
 						<button type="hidden" class="btn btn-default"
 						data-dismiss="modal" aria-hidden="true">Cancelar</button>
 						<button type="submit"

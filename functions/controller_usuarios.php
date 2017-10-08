@@ -1,5 +1,4 @@
 <?php
-//Funcion para que un usuario inicie sesion 
 function do_iniciar_sesion(){
 	global $link;
 	$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);

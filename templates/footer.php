@@ -15,5 +15,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/TFG-INF/js/bootstrap.min.js"></script>
     <script src="/TFG-INF/js/script.js"></script>
+
   </body>
 </html>

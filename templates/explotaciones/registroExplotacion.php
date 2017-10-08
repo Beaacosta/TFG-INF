@@ -20,7 +20,8 @@ $data_provincias = do_obtener_provincias();
 					</div>
 					<div class="form-group">
 						<label for="provincia">Provincia</label>
-					    <select class="form-control" name="provincia" id="provincia">
+					    <select class="form-control" name="provincia" id="provincia" onChange ="cambiarMunicipios()">
+					    <option value="null" selected>Seleccione...</option>
 					    	<?php foreach($data_provincias as $prov):?>
 					      <option value="<?= $prov['id']?>"><?= $prov['provincia']?></option>
 					      	<?php endforeach; ?>
@@ -29,9 +30,7 @@ $data_provincias = do_obtener_provincias();
 					<div class="form-group">
 						<label for="municipio">Municipio</label>
 					    <select class="form-control" name="municipio" id="municipio">
-					      <option value="1">1</option>
-					      <option value="2">2</option>
-					      <option value="3">3</option>
+					      <option value="null">Seleccione...</option>
 					    </select>
 					</div>
 					<fieldset class="form-group">
@@ -62,3 +61,4 @@ $data_provincias = do_obtener_provincias();
 		</div>
 	</div>
 </div>
+

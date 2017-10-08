@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="/TFG-INF/css/bootstrap.min.css" rel="stylesheet">
     <link href="/TFG-INF/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="/TFG-INF/js/script.js"></script>
   </head>
 
   <body>

@@ -54,7 +54,7 @@ function do_anyadir_baja(){
 
 function do_eliminar_alta(){
 	global $link;
-	$id = filter_input(INPUT_GET, 'maid');
+	$id = filter_input(INPUT_GET, 'aid');
 	$id = (int) $id;
 	if(!$id){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_MOVIMIENTOALTA_VOID');
@@ -72,7 +72,7 @@ function do_eliminar_alta(){
 
 function do_eliminar_baja(){
 	global $link;
-	$id = filter_input(INPUT_GET, 'mbid');
+	$id = filter_input(INPUT_GET, 'bid');
 	$id = (int) $id;
 	if(!$id){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_MOVIMIENTOBAJA_VOID');

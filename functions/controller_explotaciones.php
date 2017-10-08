@@ -88,6 +88,7 @@ function do_obtener_explotaciones_baja(){
 	return $result;	
 }
 
+/*
 function do_editar_explotacion(){
 	global $link;
 	$codigo_explotacion = filter_input(INPUT_POST, 'codigo_explotacion');
@@ -103,5 +104,6 @@ function do_editar_explotacion(){
 	if( !$id ){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_FALSE' );
 }
+*/
 
  ?>

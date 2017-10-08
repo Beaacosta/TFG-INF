@@ -10,7 +10,7 @@
 				    <p>¿Estás seguro de que deseas eliminar el nacimiento?</p>
 				</div>
 				<div class="modal-footer">
-					<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=eliminar_nacimiento&nid=1">
+					<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=eliminar_nacimiento&nid=<?= $nacimiento['id'] ?>">
 						<button type="hidden" class="btn btn-default"
 						data-dismiss="modal" aria-hidden="true">Cancelar</button>
 						<button type="submit" name="accion" value="registro"

@@ -10,7 +10,7 @@
 				    <p>¿Estás seguro de que deseas eliminar la parcela?</p>
 				</div>
 				<div class="modal-footer">
-					<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=eliminar_parcela&eid=1">
+					<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=eliminar_parcela&pid=<?= $parcela['id'] ?>">
 						<button type="hidden" class="btn btn-default"
 						data-dismiss="modal" aria-hidden="true">Cancelar</button>
 						<button type="submit" name="accion" value="registro"
