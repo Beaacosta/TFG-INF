@@ -63,7 +63,7 @@ function do_get_provincia_by_municipio($id){
 	$id = (int) $id;
 	// Creamos la sentencia y ejecutamos
 	$sql = "SELECT provincia FROM municipios
-			WHERE id = $id";
+			WHERE id = '$id'";
 	$result = mysqli_query($link,$sql);
 
 	$num_rows = mysqli_num_rows($result);

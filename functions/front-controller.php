@@ -8,6 +8,8 @@ switch ($accion) {
 	case 'registrarse': do_registrarse(); break;
 	case 'cerrar_sesion': do_cerrar_sesion(); break;
 	case 'eliminar_usuario': do_eliminar_usuario(); break;
+	case 'editar_usuario': do_editar_usuario(); break;
+	case 'editar_contrasenya': do_editar_contrasenya(); break;
 	//Explotaciones
 	case 'anyadir_explotacion': do_anyadir_explotacion(); break;
 	case 'editar_explotacion': do_editar_explotacion(); break;

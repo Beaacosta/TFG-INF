@@ -1,3 +1,8 @@
+<?php 
+if( session_status() != PHP_SESSION_ACTIVE ){
+	session_start();
+}
+ ?>
 <div class="row header">
 		<div class="col-xs-6 col-md-4">
 		 	<a href="" class="idioma_icon">
@@ -11,7 +16,7 @@
 		 	<h2 style="color:#FFFFFF; margin-bottom: 0%;">Cattle Manager</h2>
 		</div>
 		<div class="col-xs-12 col-md-4 align-right">
-			<span>blablabla@gmail.com</span>
+			<span><?=$_SESSION['user']?></span>
 			<form method="GET" action="/TFG-INF/index.php?accion=cerrar_sesion" style="float: right;">
 				<button class="btn conf" type="submit">
 				    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
