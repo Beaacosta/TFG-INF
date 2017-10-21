@@ -24,6 +24,10 @@ function do_iniciar_sesion(){
 		session_start();
 	}
 	$_SESSION['user'] = $email;
+	$user_completo = do_obtener_usuario_id($email);
+	foreach ($user_completo as $us) {
+		$_SESSION['user_id'] = (int) $us['id'];
+	}
 	//CAMBIAR A PAGINA SIGUIENTE
 	header('Location:/TFG-INF/portada.php?e=OK_USER_LOGGED');
 	exit;
@@ -106,6 +110,23 @@ function do_obtener_usuario_email($email){
 
 	// Creamos la sentencia y ejecutamos
 	$sql = "SELECT id, email, nombre, apellido1, apellido2 FROM usuarios
+			WHERE email = '$email'";
+	$result = mysqli_query($link,$sql);
+
+	$num_rows = mysqli_num_rows($result);
+
+	// Si la tabla que me ha devuelto no tiene filas, devuelve falso
+	if( $num_rows < 1 ){
+		return false;
+	}
+	return $result;
+}
+
+function do_obtener_usuario_id($email){
+	global $link;
+
+	// Creamos la sentencia y ejecutamos
+	$sql = "SELECT id FROM usuarios
 			WHERE email = '$email'";
 	$result = mysqli_query($link,$sql);
 

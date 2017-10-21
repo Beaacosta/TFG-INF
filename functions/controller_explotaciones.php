@@ -18,7 +18,6 @@ function do_anyadir_explotacion(){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_EXISTS' );
 		exit;
 	}
-	//$password = password_hash($password,PASSWORD_DEFAULT);
 	$sql = "INSERT INTO explotaciones(codigo_explotacion,nombre,municipio,tipo,fecha_alta) VALUES('$codigo_explotacion','$nombre','$municipio','$tipo','$fecha_alta')";
 	$result = mysqli_query($link,$sql);
 	$id = mysqli_insert_id($link);
@@ -26,6 +25,12 @@ function do_anyadir_explotacion(){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_FALSE' );
 		exit;
 	}
+	if( session_status() != PHP_SESSION_ACTIVE ){
+	session_start();
+	}
+	$user_id = $_SESSION['user_id'];
+	$sql2 = "INSERT INTO usuarios_explotaciones(usuario,explotacion) VALUES('$user_id','$id')";
+	$result = mysqli_query($link,$sql2);
 	header('Location:' . $_SERVER['PHP_SELF'] . '?e=OK_EXPLOTACION_REG');
 }
 
@@ -64,7 +69,7 @@ function do_dar_baja_explotacion(){
 	}
 }
 
-function do_obtener_explotaciones_alta(){
+function do_obtener_explotaciones_alta_all(){
 	global $link;
 	$sql = "SELECT * FROM explotaciones WHERE fecha_baja IS NULL
 			ORDER BY fecha_alta";
@@ -76,10 +81,50 @@ function do_obtener_explotaciones_alta(){
 	return $result;	
 }
 
-function do_obtener_explotaciones_baja(){
+function do_obtener_explotaciones_baja_all(){
 	global $link;
 	$sql = "SELECT * FROM explotaciones WHERE fecha_baja IS NOT NULL
 			ORDER BY fecha_alta";
+	$result = mysqli_query($link,$sql);
+	$num_rows = mysqli_num_rows($result);
+	if( $num_rows < 1 ){
+		return false;
+	}
+	return $result;	
+}
+
+function do_obtener_explotaciones_usuario($id_user){
+	global $link;
+	$sql = "SELECT explotacion FROM usuarios_explotaciones WHERE usuario='$id_user'";
+	$result = mysqli_query($link,$sql);
+	$num_rows = mysqli_num_rows($result);
+	if( $num_rows < 1 ){
+		return false;
+	}
+	return $result;	
+}
+
+
+function do_obtener_explotaciones_alta($id_user){
+	global $link;
+	$sql = "SELECT * FROM explotaciones INNER JOIN usuarios_explotaciones 
+	ON explotaciones.id=usuarios_explotaciones.explotacion 
+	WHERE usuario='$id_user' AND fecha_baja IS NULL
+	ORDER BY fecha_alta";
+	$result = mysqli_query($link,$sql);
+	$num_rows = mysqli_num_rows($result);
+	if( $num_rows < 1 ){
+		return false;
+	}
+	return $result;	
+}
+
+function do_obtener_explotaciones_baja($id_user){
+	global $link;
+	$sql = "SELECT * FROM explotaciones INNER JOIN usuarios_explotaciones 
+	ON explotaciones.id=usuarios_explotaciones.explotacion 
+	WHERE usuario='$id_user' AND fecha_baja IS NOT NULL
+	ORDER BY fecha_alta";
 	$result = mysqli_query($link,$sql);
 	$num_rows = mysqli_num_rows($result);
 	if( $num_rows < 1 ){
