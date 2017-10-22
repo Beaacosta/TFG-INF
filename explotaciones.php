@@ -19,6 +19,7 @@
 		$data_exp_baja = do_obtener_explotaciones_baja($id_user);
 ?>
 	<div id="explotaciones" class="container">
+		<?php include(ABSPATH . 'templates/errores/err_explotacion.php');?>
 		<div clas="row">
 			<div class="col-md-12 text-center">
 	            <h2 class="titulo_paginas">Mis Explotaciones</h2>

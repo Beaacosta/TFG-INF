@@ -74,9 +74,9 @@ function do_dar_baja_explotacion(){
 	$sql = "UPDATE explotaciones set fecha_baja = '$fecha_baja' where id = $id";
 	$return = mysqli_query($link,$sql);
 	if( mysqli_affected_rows($link) > 0 ){
-		header('Location:' . $_SERVER['PHP_SELF'] . '?e=OK_EXPLOTACION_EDIT');
+		header('Location:' . $_SERVER['PHP_SELF'] . '?e=OK_EXPLOTACION_BAJA');
 	}else{
-		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_EDIT');
+		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_BAJA');
 	}
 }
 
