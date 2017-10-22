@@ -1,9 +1,9 @@
 <?php 
 $data_provincias = do_obtener_provincias();
-$id_provincia = do_get_provincia_by_municipio($exp_alta['municipio']);
+$id_provincia = do_get_provincia_by_municipio($exp_baja['municipio']);
 ?>
 
-	<div class="modal fade align-left" id="editarExplotacion<?= $exp_alta['explotacion'] ?>">
+	<div class="modal fade align-left" id="editarExplotacionbaja<?= $exp_baja['explotacion'] ?>">
 	<div class="modal-dialog">
 		<div class="modal-content">
 				<div class="modal-header">
@@ -11,13 +11,13 @@ $id_provincia = do_get_provincia_by_municipio($exp_alta['municipio']);
 						aria-hidden="true">&times;</button>
 					<h4 class="modal-title">Editar mi Explotación</h4>
 				</div>
-				<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=editar_explotacion&eid=<?= $exp_alta['explotacion'] ?>">
+				<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=editar_explotacion&eid=<?= $exp_baja['explotacion'] ?>">
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="codigo_explotacion">Código de explotación</label> <input type="text" name="codigo_explotacion" class="form-control" id="codigo_explotacion" placeholder="<?= $exp_alta['codigo_explotacion'] ?>">
+						<label for="codigo_explotacion">Código de explotación</label> <input type="text" name="codigo_explotacion" class="form-control" id="codigo_explotacion" placeholder="<?= $exp_baja['codigo_explotacion'] ?>">
 					</div>
 					<div class="form-group">
-						<label for="Nombre">Nombre</label> <input type="text" name="nombre" class="form-control" id="nombre" placeholder="<?= $exp_alta['nombre'] ?>"">
+						<label for="Nombre">Nombre</label> <input type="text" name="nombre" class="form-control" id="nombre" placeholder="<?= $exp_baja['nombre'] ?>"">
 					</div>
 					<div class="form-group">
 						<label for="provincia">Provincia</label>
@@ -44,7 +44,7 @@ $id_provincia = do_get_provincia_by_municipio($exp_alta['municipio']);
 				        <div class="col-xs-12">
 				          <div class="form-check">
 				            <label class="form-check-label">
-				            <?php if($exp_alta['tipo']=="permanente"): ?>
+				            <?php if($exp_baja['tipo']=="permanente"): ?>
 				            <input class="form-check-input" type="radio" name="tipo" id="tipo" value="permanente" checked="checked">
 				        	<?php else: ?>
 				        	<input class="form-check-input" type="radio" name="tipo" id="tipo" value="permanente">
@@ -54,7 +54,7 @@ $id_provincia = do_get_provincia_by_municipio($exp_alta['municipio']);
 				          </div>
 				          <div class="form-check">
 				            <label class="form-check-label">
-				            <?php if($exp_alta['tipo']=="temporal"): ?>
+				            <?php if($exp_baja['tipo']=="temporal"): ?>
 				            <input class="form-check-input" type="radio" name="tipo" id="tipo" value="temporal" checked="checked">
 				            <?php else: ?>
 				            <input class="form-check-input" type="radio" name="tipo" id="tipo" value="temporal">

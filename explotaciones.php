@@ -110,7 +110,7 @@
 							<td class="tipo-col"><?= $exp_baja['tipo']?></td>
 							<td class="fecha_alta-col"><?= $exp_baja['fecha_alta']?></td>
 							<td class="fecha_baja-col"><?= $exp_baja['fecha_baja']?></td>
-							<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion<?= $exp_baja['explotacion']?>" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/explotaciones/editarExplotacion.php');?></td>
+							<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacionbaja<?= $exp_baja['explotacion']?>" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/explotaciones/editarExplotacionbaja.php');?></td>
 							<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarExplotacion<?= $exp_baja['explotacion']?>"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/explotaciones/eliminarExplotacion.php');?></td>	
 						</tr>
 					<?php  }?>

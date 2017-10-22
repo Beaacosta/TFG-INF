@@ -10,10 +10,10 @@
 				    <p>¿Estás seguro de que deseas dar de baja la explotación?</p>
 				</div>
 				<div class="modal-footer">
-					<form id="form_bajaExplotacion" method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=baja_explotacion&eid=<?= $exp_alta['explotacion'] ?>">
+					<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=baja_explotacion&eid=<?= $exp_alta['explotacion'] ?>">
 						<button type="hidden" class="btn btn-default"
 						data-dismiss="modal" aria-hidden="true">Cancelar</button>
-						<button type="submit" name="accion" value="registro"
+						<button type="submit" name="accion" 
 						class="btn btn-default">Baja</button>
 					</form>
 				</div>
