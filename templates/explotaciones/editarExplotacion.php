@@ -5,7 +5,7 @@ $data_provincias = do_obtener_provincias();
 	<div class="modal fade align-left" id="editarExplotacion">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=editar_explotacion?eid=<?= $explotacion['id'] ?>">
+			<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>?accion=editar_explotacion?eid=<?= $exp_alta['id'] ?>">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-hidden="true">&times;</button>
@@ -13,10 +13,10 @@ $data_provincias = do_obtener_provincias();
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="codigo_explotacion">Código de explotación</label> <input type="text" name="codigo_explotacion" class="form-control" id="codigo_explotacion" placeholder="<?= $explotacion['codigo_explotacion'] ?>">
+						<label for="codigo_explotacion">Código de explotación</label> <input type="text" name="codigo_explotacion" class="form-control" id="codigo_explotacion" placeholder="<?= $exp_alta['codigo_explotacion'] ?>">
 					</div>
 					<div class="form-group">
-						<label for="Nombre">Nombre</label> <input type="text" name="nombre" class="form-control" id="nombre" placeholder="<?= $explotacion['nombre'] ?>"">
+						<label for="Nombre">Nombre</label> <input type="text" name="nombre" class="form-control" id="nombre" placeholder="<?= $exp_alta['nombre'] ?>"">
 					</div>
 					<div class="form-group">
 						<label for="provincia">Provincia</label>

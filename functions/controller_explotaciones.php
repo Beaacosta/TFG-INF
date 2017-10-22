@@ -36,13 +36,24 @@ function do_anyadir_explotacion(){
 
 function do_eliminar_explotacion(){
 	global $link;
-	$id = filter_input(INPUT_GET, 'eid');
-	$id = (int) $id;
-	if(!$id){
+	$id_exp = filter_input(INPUT_GET, 'eid');
+	$id_exp = (int) $id_exp;
+	if(!$id_exp){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=ERR_EXPLOTACION_VOID');
 		exit;
 	}
-	$sql = "DELETE FROM explotaciones WHERE id = $id";
+	if( session_status() != PHP_SESSION_ACTIVE ){
+			session_start();
+		}
+	$user_id = $_SESSION['user_id'];
+	//Eliminamos usuario-explotacion
+	$sql2 = "DELETE FROM usuarios_explotaciones WHERE usuario = $user_id AND explotacion = $id_exp";
+	$return2 = mysqli_query($link,$sql2);
+	//Eliminamos animales de la explotacion
+	$sql3 = "DELETE FROM animales WHERE explotacion = $id_exp";
+	$return3 = mysqli_query($link,$sql3);
+	//Eliminamos explotacion
+	$sql = "DELETE FROM explotaciones WHERE id = '$id_exp'";
 	$return = mysqli_query($link,$sql);
 	if( mysqli_affected_rows($link) > 0 ){
 		header('Location:' . $_SERVER['PHP_SELF'] . '?e=OK_EXPLOTACION_DELETE');

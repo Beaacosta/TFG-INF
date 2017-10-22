@@ -67,8 +67,8 @@
 									<td class="tipo-col"><?= $exp_alta['tipo']?></td>
 									<td class="fecha_alta-col"><?= $exp_alta['fecha_alta']?></td>
 									<td class="fecha_baja-col"> - </td>
-									<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/explotaciones/editarExplotacion.php');?></td>
-										<td class="remove-col"><a href="" data-toggle="modal" data-target="#bajaExplotacion"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/explotaciones/bajaExplotacion.php');?></td>	
+									<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion<?= $exp_alta['explotacion'] ?>"class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/explotaciones/editarExplotacion.php');?></td>
+									<td class="remove-col"><a href="" id="modal_bajaExplotacion" data-toggle="modal" data-target="#bajaExplotacion<?= $exp_alta['explotacion'] ?>"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/explotaciones/bajaExplotacion.php');?></td>	
 								</tr>
 						<?php  }?>
 						</tbody>
@@ -85,7 +85,6 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th class="id-col">ID</th>
 							<th class="codigo_explotacion-col">Codigo Explotación</th>
 							<th class="nombre-col">Nombre</th>
 							<th class="provincia-col">Provincia</th>
@@ -104,7 +103,6 @@
 					$nombre_provincia=$nombre_provincia['provincia'];
 					?>
 						<tr>
-							<td class="id-col"><?= $exp_baja['id']?></td>
 							<td class="codigo_explotacion-col"><?= $exp_baja['codigo_explotacion']?></td>
 							<td class="nombre-col"><?= $exp_baja['nombre']?></td>
 							<th class="provincia-col"><?=$nombre_provincia?></th>
@@ -112,8 +110,8 @@
 							<td class="tipo-col"><?= $exp_baja['tipo']?></td>
 							<td class="fecha_alta-col"><?= $exp_baja['fecha_alta']?></td>
 							<td class="fecha_baja-col"><?= $exp_baja['fecha_baja']?></td>
-							<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/explotaciones/editarExplotacion.php');?></td>
-							<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarExplotacion"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/explotaciones/eliminarExplotacion.php');?></td>	
+							<td class="edit-col"><a href="" data-toggle="modal" data-target="#editarExplotacion<?= $exp_baja['explotacion']?>" class="glyphicon glyphicon-pencil"></a><?php include(ABSPATH . 'templates/explotaciones/editarExplotacion.php');?></td>
+							<td class="remove-col"><a href="" data-toggle="modal" data-target="#eliminarExplotacion<?= $exp_baja['explotacion']?>"  class="glyphicon glyphicon-remove"></a><?php include(ABSPATH . 'templates/explotaciones/eliminarExplotacion.php');?></td>	
 						</tr>
 					<?php  }?>
 					</tbody>
